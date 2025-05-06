@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1i3x7upr50oh"]
+
+[ext_resource type="Script" uid="uid://c7ojkn84idtk8" path="res://alfil.gd" id="1_w16nq"]
+[ext_resource type="Texture2D" uid="uid://djitk0b57oh7f" path="res://imagenes/imagen_2025-05-06_104035582-removebg-preview.png" id="2_73iv7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oico4"]
+size = Vector2(238, 263)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5nap"]
+size = Vector2(241, 309)
+
+[node name="Alfil" type="CharacterBody2D"]
+script = ExtResource("1_w16nq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_73iv7")
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+position = Vector2(-109, -9.5)
+shape = SubResource("RectangleShape2D_oico4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-110.5, -1.5)
+shape = SubResource("RectangleShape2D_e5nap")
+
+[connection signal="input_event" from="." to="." method="_on_click_area_input_event"]

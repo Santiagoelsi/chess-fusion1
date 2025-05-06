@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://vmdmxs78xuml"]
+
+[ext_resource type="PackedScene" uid="uid://4ado5hipdwb8" path="res://peon.tscn" id="1_6gsi4"]
+[ext_resource type="PackedScene" uid="uid://dih5r8jmid7rf" path="res://rey.tscn" id="2_86wbs"]
+[ext_resource type="PackedScene" uid="uid://dm2hr47rb7qf2" path="res://reina.tscn" id="3_r55b2"]
+[ext_resource type="PackedScene" uid="uid://b1i3x7upr50oh" path="res://alfil.tscn" id="4_wmdfq"]
+[ext_resource type="PackedScene" uid="uid://ckvoj5542p1rb" path="res://caballo.tscn" id="5_60wgg"]
+[ext_resource type="PackedScene" uid="uid://d17grfdjqp8ti" path="res://torre.tscn" id="6_o1v3q"]
+
+[node name="Tablero" type="Node2D"]
+
+[node name="peon1" parent="." instance=ExtResource("1_6gsi4")]
+position = Vector2(300, 160)
+
+[node name="peon2" parent="." instance=ExtResource("1_6gsi4")]
+position = Vector2(300, 280)
+
+[node name="peon3" parent="." instance=ExtResource("1_6gsi4")]
+position = Vector2(300, 380)
+
+[node name="peon4" parent="." instance=ExtResource("1_6gsi4")]
+position = Vector2(300, 500)
+
+[node name="peon5" parent="." instance=ExtResource("1_6gsi4")]
+position = Vector2(300, 620)
+
+[node name="peon6" parent="." instance=ExtResource("1_6gsi4")]
+position = Vector2(300, 740)
+
+[node name="peon7" parent="." instance=ExtResource("1_6gsi4")]
+position = Vector2(300, 860)
+
+[node name="peon8" parent="." instance=ExtResource("1_6gsi4")]
+position = Vector2(300, 980)
+
+[node name="Rey" parent="." instance=ExtResource("2_86wbs")]
+position = Vector2(-326, 322)
+scale = Vector2(2.7, 2.7)
+
+[node name="Reina" parent="." instance=ExtResource("3_r55b2")]
+position = Vector2(-721, 594)
+scale = Vector2(1, 1)
+
+[node name="Alfil" parent="." instance=ExtResource("4_wmdfq")]
+position = Vector2(1060, 931)
+scale = Vector2(1.1, 1.1)
+
+[node name="Alfil2" parent="." instance=ExtResource("4_wmdfq")]
+position = Vector2(-378, 1009)
+scale = Vector2(1.1, 1.1)
+
+[node name="Caballo" parent="." instance=ExtResource("5_60wgg")]
+position = Vector2(1876, 993)
+scale = Vector2(1.8, 1.8)
+
+[node name="Caballo2" parent="." instance=ExtResource("5_60wgg")]
+position = Vector2(2163, 464)
+scale = Vector2(1.8, 1.8)
+
+[node name="Torre" parent="." instance=ExtResource("6_o1v3q")]
+position = Vector2(1136, 205)
+
+[node name="Torre2" parent="." instance=ExtResource("6_o1v3q")]
+position = Vector2(1531, 231)

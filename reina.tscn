@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm2hr47rb7qf2"]
+
+[ext_resource type="Script" uid="uid://d1vfkcxhp87p0" path="res://reina.gd" id="1_iewqp"]
+[ext_resource type="Texture2D" uid="uid://bpgf568oyw2s8" path="res://imagenes/imagen_2025-05-06_104443377-removebg-preview.png" id="2_34jei"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iewqp"]
+radius = 166.865
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iewqp"]
+size = Vector2(213, 260.5)
+
+[node name="Reina" type="Area2D"]
+scale = Vector2(0.806, 0.806)
+script = ExtResource("1_iewqp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, -3)
+texture = ExtResource("2_34jei")
+
+[node name="ClickArena" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArena"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_iewqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-50, -16)
+scale = Vector2(0.806, 0.806)
+shape = SubResource("RectangleShape2D_iewqp")
+
+[connection signal="input_event" from="." to="." method="_on_click_arena_input_event"]

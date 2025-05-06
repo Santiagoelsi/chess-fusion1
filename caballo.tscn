@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckvoj5542p1rb"]
+
+[ext_resource type="Script" uid="uid://csi2xtvlpqs0q" path="res://caballo.gd" id="1_aufcg"]
+[ext_resource type="Texture2D" uid="uid://d23j2uglj4367" path="res://imagenes/imagen_2025-05-06_104307508-removebg-preview.png" id="2_km780"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05hob"]
+size = Vector2(255, 247)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48nd0"]
+size = Vector2(242, 244)
+
+[node name="Caballo" type="CharacterBody2D"]
+scale = Vector2(0.806, 0.806)
+script = ExtResource("1_aufcg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 5)
+scale = Vector2(0.785106, 0.759652)
+texture = ExtResource("2_km780")
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+position = Vector2(6.5, 31.5)
+shape = SubResource("RectangleShape2D_05hob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(17, 30)
+shape = SubResource("RectangleShape2D_48nd0")
+
+[connection signal="input_event" from="." to="." method="_on_click_area_input_event"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d17grfdjqp8ti"]
+
+[ext_resource type="Texture2D" uid="uid://7c52tg12fb61" path="res://imagenes/imagen_2025-05-06_104359721-removebg-preview.png" id="1_7phkw"]
+[ext_resource type="Script" uid="uid://dbyybwaq3ubie" path="res://torre.gd" id="1_rvvv2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4k3pj"]
+size = Vector2(269, 347)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50qeg"]
+size = Vector2(233, 328)
+
+[node name="Torre" type="CharacterBody2D"]
+scale = Vector2(0.806, 0.806)
+script = ExtResource("1_rvvv2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7phkw")
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+position = Vector2(-55, 0)
+shape = SubResource("RectangleShape2D_4k3pj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-42.5, 9)
+scale = Vector2(0.806, 0.806)
+shape = SubResource("RectangleShape2D_50qeg")
+
+[connection signal="input_event" from="." to="." method="_on_click_area_input_event"]
