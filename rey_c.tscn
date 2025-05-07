@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8u32wvw7er2e"]
+
+[ext_resource type="Script" uid="uid://eb5voeyrb2wf" path="res://rey_c.gd" id="1_1fbog"]
+[ext_resource type="Texture2D" uid="uid://b1hnoi5qjswt" path="res://imagenes/imagen_2025-05-06_200135990-removebg-preview.png" id="1_cicqg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fbog"]
+size = Vector2(113, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lp7ud"]
+size = Vector2(112, 115)
+
+[node name="reyC" type="Area2D"]
+scale = Vector2(-1, 1)
+script = ExtResource("1_1fbog")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cicqg")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-7.5, -2.5)
+shape = SubResource("RectangleShape2D_1fbog")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, -2.5)
+shape = SubResource("RectangleShape2D_lp7ud")
+
+[connection signal="input_event" from="." to="." method="on_click_arena_input_event"]

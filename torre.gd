@@ -1,15 +1,21 @@
 extends Node2D
 
+@onready var Click_Arena = $ClickArena
+var selected = false
+var tile_size = 64
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	Click_Arena.connect("input_event", _on_click)
 
+func _on_click(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		selected = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _unhandled_input(event):
+	if selected and event is InputEventMouseButton and event.pressed:
+		var from = (position / tile_size).floor()
+		var to = (get_global_mouse_position() / tile_size).floor()
 
-
-func _on_click_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
+		if from.x == to.x or from.y == to.y:
+			global_position = to * tile_size
+			selected = false

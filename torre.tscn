@@ -9,16 +9,16 @@ size = Vector2(269, 347)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_50qeg"]
 size = Vector2(233, 328)
 
-[node name="Torre" type="CharacterBody2D"]
+[node name="Torre" type="Area2D"]
 scale = Vector2(0.806, 0.806)
 script = ExtResource("1_rvvv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7phkw")
 
-[node name="ClickArea" type="Area2D" parent="."]
+[node name="ClickArena" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArena"]
 position = Vector2(-55, 0)
 shape = SubResource("RectangleShape2D_4k3pj")
 

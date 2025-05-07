@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://f7v0xskaqdwn"]
+
+[ext_resource type="Script" uid="uid://dtq5y63g4dyv3" path="res://caballo_c.gd" id="1_npmik"]
+[ext_resource type="Texture2D" uid="uid://cua4uathw2m8y" path="res://imagenes/imagen_2025-05-06_200043198-removebg-preview.png" id="1_pb6at"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npmik"]
+size = Vector2(236, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hygdt"]
+size = Vector2(224, 208)
+
+[node name="CaballoC" type="Area2D"]
+scale = Vector2(-1, 1)
+script = ExtResource("1_npmik")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pb6at")
+
+[node name="ClickArena" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArena"]
+position = Vector2(-1, 11)
+shape = SubResource("RectangleShape2D_npmik")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 12)
+shape = SubResource("RectangleShape2D_hygdt")
+
+[connection signal="input_event" from="." to="." method="on_click_arena_input_event"]

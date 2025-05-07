@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1y01hthlalxq"]
+
+[ext_resource type="Script" uid="uid://5vkkws5o012c" path="res://alfil_c.gd" id="1_1hqod"]
+[ext_resource type="Texture2D" uid="uid://dy2u01iw0e4jd" path="res://imagenes/imagen_2025-05-06_195926982-removebg-preview.png" id="1_l6geg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hqod"]
+size = Vector2(128, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1n1ff"]
+size = Vector2(125, 141)
+
+[node name="alfilC" type="Area2D"]
+scale = Vector2(-1, 1)
+script = ExtResource("1_1hqod")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l6geg")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-24, -5.5)
+shape = SubResource("RectangleShape2D_1hqod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-21.5, -5.5)
+shape = SubResource("RectangleShape2D_1n1ff")
+
+[connection signal="input_event" from="." to="." method="on_click_arena_input_event"]

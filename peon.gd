@@ -1,24 +1,26 @@
-extends Area2D
+extends Node2D
 
-var has_moved = false
-var grid_size = 64  # Tamaño de una casilla
+@onready var Click_Arena = $ClickArena
+
+var selected = false
+var tile_size = 64
+var direction = -1 # Cambia a 1 si es del otro equipo
 
 func _ready():
-	set_process_input(true)
+	Click_Arena.connect("input_event", _on_click)
 
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		move_forward()
+func _on_click(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		selected = true
 
-func move_forward():
-	var move_distance = grid_size if has_moved else grid_size * 2
-	position.y -= float(move_distance)
-	has_moved = true
+func _unhandled_input(event):
+	if selected and event is InputEventMouseButton and event.pressed:
+		var from = (position / tile_size).floor()
+		var to = (get_global_mouse_position() / tile_size).floor()
+		var dx = to.x - from.x
+		var dy = to.y - from.y
 
-
-func on_click_arena_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
-
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
+		# Movimiento de 1 hacia adelante
+		if dx == 0 and dy == direction:
+			global_position = to * tile_size
+			selected = false

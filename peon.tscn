@@ -21,8 +21,6 @@ texture = ExtResource("2_ksfh5")
 position = Vector2(-23, 19.75)
 shape = SubResource("RectangleShape2D_1jjwk")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="ClickArena" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArena"]
