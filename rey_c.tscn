@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8u32wvw7er2e"]
 
-[ext_resource type="Script" uid="uid://eb5voeyrb2wf" path="res://rey_c.gd" id="1_1fbog"]
+[ext_resource type="Script" uid="uid://b2on8j2hb8qbf" path="res://rey_c.gd" id="1_1fbog"]
 [ext_resource type="Texture2D" uid="uid://b1hnoi5qjswt" path="res://imagenes/imagen_2025-05-06_200135990-removebg-preview.png" id="1_cicqg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fbog"]

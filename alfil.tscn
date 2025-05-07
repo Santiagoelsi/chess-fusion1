@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1i3x7upr50oh"]
 
-[ext_resource type="Script" uid="uid://c7ojkn84idtk8" path="res://alfil.gd" id="1_w16nq"]
+[ext_resource type="Script" uid="uid://pc2so3cyevw6" path="res://alfil.gd" id="1_w16nq"]
 [ext_resource type="Texture2D" uid="uid://djitk0b57oh7f" path="res://imagenes/imagen_2025-05-06_104035582-removebg-preview.png" id="2_73iv7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oico4"]

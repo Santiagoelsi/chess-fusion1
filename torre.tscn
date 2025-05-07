@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d17grfdjqp8ti"]
 
 [ext_resource type="Texture2D" uid="uid://7c52tg12fb61" path="res://imagenes/imagen_2025-05-06_104359721-removebg-preview.png" id="1_7phkw"]
-[ext_resource type="Script" uid="uid://dbyybwaq3ubie" path="res://torre.gd" id="1_rvvv2"]
+[ext_resource type="Script" uid="uid://i4hnelinof03" path="res://torre.gd" id="1_rvvv2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4k3pj"]
 size = Vector2(269, 347)

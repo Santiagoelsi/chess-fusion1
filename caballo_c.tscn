@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://f7v0xskaqdwn"]
 
-[ext_resource type="Script" uid="uid://dtq5y63g4dyv3" path="res://caballo_c.gd" id="1_npmik"]
+[ext_resource type="Script" uid="uid://cfh0viyisjb7o" path="res://caballo_c.gd" id="1_npmik"]
 [ext_resource type="Texture2D" uid="uid://cua4uathw2m8y" path="res://imagenes/imagen_2025-05-06_200043198-removebg-preview.png" id="1_pb6at"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npmik"]

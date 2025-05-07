@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dm2hr47rb7qf2"]
 
-[ext_resource type="Script" uid="uid://d1vfkcxhp87p0" path="res://reina.gd" id="1_iewqp"]
+[ext_resource type="Script" uid="uid://bh2m255pum3em" path="res://reina.gd" id="1_iewqp"]
 [ext_resource type="Texture2D" uid="uid://bpgf568oyw2s8" path="res://imagenes/imagen_2025-05-06_104443377-removebg-preview.png" id="2_34jei"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iewqp"]
