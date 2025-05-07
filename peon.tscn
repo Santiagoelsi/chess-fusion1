@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckbguprbp2208"]
+[gd_scene load_steps=5 format=3 uid="uid://4ado5hipdwb8"]
 
-[ext_resource type="Script" path="res://peon.gd" id="1_b6c13"]
+[ext_resource type="Script" uid="uid://b224vaedkx2n6" path="res://peon.gd" id="1_b6c13"]
 [ext_resource type="Texture2D" uid="uid://da2nlsfef6y2a" path="res://imagenes/caballero.png" id="2_ksfh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jjwk"]
